@@ -11,11 +11,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180905193208) do
+ActiveRecord::Schema.define(version: 20180905213730) do
 
   create_table "buskets", force: :cascade do |t|
     t.integer "user_id"
   end
+
+  create_table "carts_items", id: false, force: :cascade do |t|
+    t.integer "cart_id"
+    t.integer "item_id"
+  end
+
+  add_index "carts_items", ["cart_id", "item_id"], name: "index_carts_items_on_cart_id_and_item_id"
+  add_index "carts_items", ["item_id", "cart_id"], name: "index_carts_items_on_item_id_and_cart_id"
 
   create_table "orders", force: :cascade do |t|
     t.integer  "user_id"

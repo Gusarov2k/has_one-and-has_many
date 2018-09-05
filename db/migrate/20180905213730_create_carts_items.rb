@@ -1,6 +1,7 @@
 class CreateCartsItems < ActiveRecord::Migration
   def self.up
-    create_table :carts_items, id false do |t|
+  	# deprecated first_key add id: false
+    create_table :carts_items, id: false do |t|
     	# t.references :cart
     	t.integer :cart_id
     	# t.references :item
