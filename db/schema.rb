@@ -17,13 +17,13 @@ ActiveRecord::Schema.define(version: 20180905214703) do
     t.integer "user_id"
   end
 
-  create_table "carts_items", id: false, force: :cascade do |t|
+  create_table "buskets_items", id: false, force: :cascade do |t|
     t.integer "busket_id"
     t.integer "item_id"
   end
 
-  add_index "carts_items", ["busket_id", "item_id"], name: "index_carts_items_on_busket_id_and_item_id"
-  add_index "carts_items", ["item_id", "busket_id"], name: "index_carts_items_on_item_id_and_busket_id"
+  add_index "buskets_items", ["busket_id", "item_id"], name: "index_buskets_items_on_busket_id_and_item_id"
+  add_index "buskets_items", ["item_id", "busket_id"], name: "index_buskets_items_on_item_id_and_busket_id"
 
   create_table "items", force: :cascade do |t|
     t.string   "name"
