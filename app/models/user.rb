@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
 	has_one :busket
-	# if delete all links column add dependent: :destroy
+	# if delete row user to delete all his row orders, for it have add code dependent: :destroy
 	has_many :orders, dependent: :destroy
 end
