@@ -13,4 +13,8 @@ class Busket < ActiveRecord::Base
 			positions.create(item: i, quantity: 1)
 		end
 	end
+# method delete item on his id
+	def remove_position(position_to_remove_id)
+		positions.where(item_id: position_to_remove_id).first.try(:destroy)
+	end
 end
