@@ -34,7 +34,8 @@ gem "haml-rails", "~> 1.0"
 # gem 'capistrano-rails', group: :development
 
 	# Multiple Table Inheritance
-	gem 'multiple_table_inheritance', '~> 0.2.1'
+	# gem 'multiple_table_inheritance', '~> 0.2.1'
+  gem 'class-table-inheritance', '~> 1.3'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
