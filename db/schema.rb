@@ -67,8 +67,9 @@ ActiveRecord::Schema.define(version: 20180908090230) do
   add_index "positions", ["busket_id", "item_id"], name: "index_positions_on_busket_id_and_item_id"
   add_index "positions", ["item_id", "busket_id"], name: "index_positions_on_item_id_and_busket_id"
 
-  create_table "programmers", primary_key: "employee_id", force: :cascade do |t|
-    t.string "programmers_column"
+  create_table "programmers", id: false, force: :cascade do |t|
+    t.integer "employee_id"
+    t.string  "programmers_column"
   end
 
   create_table "users", force: :cascade do |t|

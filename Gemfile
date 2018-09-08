@@ -35,7 +35,7 @@ gem "haml-rails", "~> 1.0"
 
 	# Multiple Table Inheritance
 	# gem 'multiple_table_inheritance', '~> 0.2.1'
-  gem 'class-table-inheritance', '~> 1.3'
+  gem 'dbview_cti'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
