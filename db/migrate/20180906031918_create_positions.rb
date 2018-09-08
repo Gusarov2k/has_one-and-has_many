@@ -7,8 +7,5 @@ class CreatePositions < ActiveRecord::Migration
       t.integer :quantity, default: 1
       t.timestamps null: false
     end
-
-    add_index :positions, [:item_id, :busket_id]
-    add_index :positions, [:busket_id, :item_id]
   end
 end
