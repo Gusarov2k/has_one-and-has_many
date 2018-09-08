@@ -1,5 +1,4 @@
 class Position < ActiveRecord::Base
-	# has_many through
-	belongs_to :item
-	belongs_to :busket
+	# polymorh has_many through
+	belongs_to :container, polymorphic: true
 end
