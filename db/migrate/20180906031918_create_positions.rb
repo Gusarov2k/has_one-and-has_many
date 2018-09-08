@@ -3,7 +3,7 @@ class CreatePositions < ActiveRecord::Migration
     create_table :positions do |t|
 
       t.integer :item_id
-      t.integer :busket_id
+      t.integer :container_id
       t.integer :quantity, default: 1
       t.timestamps null: false
     end
