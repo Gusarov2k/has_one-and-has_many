@@ -1,3 +1,3 @@
 class Employee < ActiveRecord::Base
-	acts_as_superclass
+	cti_base_class
 end

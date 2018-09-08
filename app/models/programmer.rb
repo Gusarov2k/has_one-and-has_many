@@ -1,3 +1,3 @@
-class Programmer < ActiveRecord::Base
-	inherits_from :employee
+class Programmer < Employee
+	cti_derived_class
 end
