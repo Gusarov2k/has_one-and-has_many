@@ -58,14 +58,11 @@ ActiveRecord::Schema.define(version: 20180908090230) do
 
   create_table "positions", force: :cascade do |t|
     t.integer  "item_id"
-    t.integer  "busket_id"
-    t.integer  "quantity",   default: 1
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
+    t.integer  "container_id"
+    t.integer  "quantity",     default: 1
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
-
-  add_index "positions", ["busket_id", "item_id"], name: "index_positions_on_busket_id_and_item_id"
-  add_index "positions", ["item_id", "busket_id"], name: "index_positions_on_item_id_and_busket_id"
 
   create_table "programmers", force: :cascade do |t|
     t.integer "employee_id"
@@ -77,3 +74,6 @@ ActiveRecord::Schema.define(version: 20180908090230) do
     t.string "email"
   end
 
+  cti_create_view('Programmer')
+
+end
