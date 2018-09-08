@@ -67,7 +67,7 @@ ActiveRecord::Schema.define(version: 20180908090230) do
   add_index "positions", ["busket_id", "item_id"], name: "index_positions_on_busket_id_and_item_id"
   add_index "positions", ["item_id", "busket_id"], name: "index_positions_on_item_id_and_busket_id"
 
-  create_table "programmers", id: false, force: :cascade do |t|
+  create_table "programmers", force: :cascade do |t|
     t.integer "employee_id"
     t.string  "programmers_column"
   end
@@ -76,5 +76,7 @@ ActiveRecord::Schema.define(version: 20180908090230) do
     t.string "first_name"
     t.string "email"
   end
+
+  cti_create_view('Programmer')
 
 end
