@@ -77,6 +77,3 @@ ActiveRecord::Schema.define(version: 20180908090230) do
     t.string "email"
   end
 
-  cti_create_view('Programmer')
-
-end
